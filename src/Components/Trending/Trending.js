@@ -8,7 +8,7 @@ const Trending = () => {
       <h4>Trending</h4>
       <Content>
         <Wrap>
-          <Link to="/">
+          <Link to="/detail/:id">
             <img
               src="https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/C0A883EAB54DDDC924018D08CF4555EE72B3E9A8C214BDADF29CB82B5E2275D7/scale?width=400&aspectRatio=1.78&format=jpeg"
               alt=""
@@ -16,7 +16,7 @@ const Trending = () => {
           </Link>
         </Wrap>
         <Wrap>
-          <Link to="/">
+          <Link to="/detail/:id">
             <img
               src="https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/C0A883EAB54DDDC924018D08CF4555EE72B3E9A8C214BDADF29CB82B5E2275D7/scale?width=400&aspectRatio=1.78&format=jpeg"
               alt=""
@@ -24,7 +24,7 @@ const Trending = () => {
           </Link>
         </Wrap>
         <Wrap>
-          <Link to="/">
+          <Link to="/detail/:id">
             <img
               src="https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/C0A883EAB54DDDC924018D08CF4555EE72B3E9A8C214BDADF29CB82B5E2275D7/scale?width=400&aspectRatio=1.78&format=jpeg"
               alt=""
@@ -32,7 +32,7 @@ const Trending = () => {
           </Link>
         </Wrap>
         <Wrap>
-          <Link to="/">
+          <Link to="/detail/:id">
             <img
               src="https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/C0A883EAB54DDDC924018D08CF4555EE72B3E9A8C214BDADF29CB82B5E2275D7/scale?width=400&aspectRatio=1.78&format=jpeg"
               alt=""
