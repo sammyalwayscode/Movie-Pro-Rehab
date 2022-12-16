@@ -1,12 +1,15 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const Header = () => {
   return (
     <Nav>
-      <Logo>
-        <img src="/Assets/images/logo.svg" alt="" />
-      </Logo>
+      <Link to="/">
+        <Logo>
+          <img src="/Assets/images/logo.svg" alt="" />
+        </Logo>
+      </Link>
       <NavMenu>
         <a href="/home">
           <img src="/Assets/images/home-icon.svg" alt="home" />
@@ -33,7 +36,9 @@ const Header = () => {
           <span>SERIES</span>
         </a>
       </NavMenu>
-      <Login>Login</Login>
+      <Link to="/">
+        <Login>Login</Login>
+      </Link>
     </Nav>
   );
 };
