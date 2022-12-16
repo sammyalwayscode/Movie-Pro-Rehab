@@ -1,47 +1,67 @@
 import React from "react";
 import styled from "styled-components";
+import { useParams } from "react-router-dom";
+import data from "../Data.json";
+import swal from "sweetalert";
 
 const Detail = () => {
+  const { id } = useParams();
+  const newID = data[id - 1];
+  console.log(data[id - 1]);
   return (
     <Container>
       <Background>
-        <img
-          src="https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/B409C2A425D58C32D822EB633C7CAE3DC910DC2FC62D2B1807A0BB092C531E9A/scale?width=1440&aspectRatio=1.78&format=jpeg"
-          alt=""
-        />
+        <img src={newID.backgroundImg} alt={newID.title} />
       </Background>
 
       <ImageTitle>
-        <img
-          src="https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/2041CE26663867FC4EF20377B8625BD629E619452E23BCDB1AB259DD475C2EA1/scale?width=1440&aspectRatio=1.78"
-          alt=""
-        />
+        <img src={newID.titleImg} alt="" />
       </ImageTitle>
 
       <ContentMeta>
         <Controls>
-          <Player>
+          <Player
+            onClick={() => {
+              swal("Oops", "Update Coming Soon", "info", {
+                button: "Alright",
+              });
+            }}
+          >
             <img src="/Assets/images/play-icon-black.png" alt="" />
             <span>Play</span>
           </Player>
-          <Trailer>
-            <img src="/Assets/images/play-icon-white.png" alt="" />
-            <span>Trailer</span>
-          </Trailer>
+          <a href={newID.triller}>
+            <Trailer>
+              <img src="/Assets/images/play-icon-white.png" alt="" />
+              <span>Trailer</span>
+            </Trailer>
+          </a>
 
-          <AddList>
+          <AddList
+            onClick={() => {
+              swal("Oops", "Update Coming Soon", "info", {
+                button: "Alright",
+              });
+            }}
+          >
             <div>
-              <img src="" alt="" />
+              <img src="/Assets/images/watchlist-icon.svg" alt="" />
             </div>
           </AddList>
-          <GroupWatch>
+          <GroupWatch
+            onClick={() => {
+              swal("Oops", "Update Coming Soon", "info", {
+                button: "Alright",
+              });
+            }}
+          >
             <div>
               <img src="/Assets/images/group-icon.png" alt="" />
             </div>
           </GroupWatch>
         </Controls>
-        <SubTitles>Subtitle</SubTitles>
-        <Description>Description</Description>
+        <SubTitles> {newID.subTitle} </SubTitles>
+        <Description> {newID.description} </Description>
       </ContentMeta>
     </Container>
   );
@@ -197,9 +217,11 @@ const AddList = styled.div`
     width: 40px;
     background: rgb(0, 0, 0);
     border-radius: 50%;
+    display: flex;
+    justify-content: center;
 
     img {
-      width: 100%;
+      width: 70%;
     }
   }
 `;
@@ -218,9 +240,12 @@ const GroupWatch = styled.div`
     width: 40px;
     background: rgb(0, 0, 0);
     border-radius: 50%;
+    display: flex;
+    justify-content: center;
 
     img {
-      width: 100%;
+      width: 70%;
+      object-fit: contain;
     }
   }
 `;
