@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const Login = () => {
@@ -7,7 +8,11 @@ const Login = () => {
       <Content>
         <CTA>
           <CTALogoOne src="/Assets/images/cta-logo-one.svg" alt="" />
-          <SignUp>GET ALL THERE</SignUp>
+
+          <SignUp>
+            <Link to="/home">GET ALL THERE</Link>
+          </SignUp>
+
           <Description>
             Get Premier Access to Raya and the last Dragon for an additional fee
             with a Disney+ subscription. As of 03/26/21, the price of Disney+

@@ -36,7 +36,7 @@ const Header = () => {
           <span>SERIES</span>
         </a>
       </NavMenu>
-      <Link to="/">
+      <Link to="/home">
         <Login>Login</Login>
       </Link>
     </Nav>
